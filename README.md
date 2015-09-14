@@ -21,4 +21,4 @@ The url of the mongodb database.  Defaults to `mongodb://127.0.0.1`.
   Number of milliseconds to wait between connection attempts. Defaults to `6000`.
 
 ### mongoOpts
-- MongodDB connection options passed to mongoose.connect().
+- MongodDB connection options passed to `mongoose.connect()`.
