@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "repohere"
+    "url": "https://github.com/marshallformula/mongoose-persistent-connector"
   },
   "keywords": [
     "mongoose",
