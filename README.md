@@ -11,7 +11,7 @@ connector.connect('mongodb://127.0.0.1', {log: true, retryInterval: 6000});
 ```
 
 ### mongoURL
-The url of the mongodb database.  Defaults to 'mongodb://127.0.0.1'.
+The url of the mongodb database.  Defaults to `mongodb://127.0.0.1`.
 
 ### connectionOpts
 - `log`
