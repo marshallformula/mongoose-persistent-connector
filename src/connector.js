@@ -1,17 +1,16 @@
 import mongoose from 'mongoose';
-import bunyan from 'bunyan';
 
 
-let retry, doLog;
+let retry, doLog, dbURL, opts;
 
 function log(level, msg) {
   if (doLog) console[level](msg);
 }
 
 
-function connectDB(mongoURL, opts) {
-  log('info', `attempting mongodb connection : ${mongoURL}`);
-  mongoose.connect(mongoURL, opts);
+function connectDB() {
+  log('info', `attempting mongodb connection : ${dbURL}`);
+  mongoose.connect(dbURL, opts);
 };
 
 
@@ -43,10 +42,12 @@ export default {
    * @param {object} mongoOpts Mongodb connection options passed to mongoose.connect()
    */
   connect(mongoURL = 'mongodb://127.0.0.1', {log = true, retryInterval = 6000} = {}, mongoOpts = {}) {
+    dbURL = mongoURL
     doLog = log;
     retry = retryInterval;
+    opts = mongoOpts;
 
 
-    connectDB(mongoURL, mongoOpts);
+    connectDB();
   }
 };
