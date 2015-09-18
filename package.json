@@ -1,6 +1,6 @@
 {
   "name": "mongoose-persistent-connector",
-  "version": "0.0.2,
+  "version": "0.0.2",
   "description": "Simple module for managing a mongodb/mongoose connection that will keep retrying to connect.",
   "main": "index.js",
   "scripts": {
