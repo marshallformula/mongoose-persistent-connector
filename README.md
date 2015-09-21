@@ -1,6 +1,12 @@
 mongoose-persistent-connector
 -----------------------------
 
+# DEPRECATED #
+
+> The functionality that this module represents exists natively in the mongo driver by utilizing the `retryMiliSeconds` and `numberOfRetries` options passed to the connect method.
+
+---
+
 `mongoose-persistent-connector` is a simple connection utility for mongoose/mongodb connections.  It's a simple wrapper around the connection that will re-attempt connecting to the database upon when it disconnects on a specified retry interval.
 
 Example:
